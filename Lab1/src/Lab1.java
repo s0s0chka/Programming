@@ -1,5 +1,3 @@
-package prog;
-
 public class Lab1 {
 
     public static void printArray(double[][] array){
@@ -38,11 +36,10 @@ public class Lab1 {
         //Task 2
         float[] x = new float[11];
         for(int i = 0; i < x.length; i++){
-            float temp = ((float)Math.random() * 26) - 12;
-	        if (temp >= 13) {
-		        temp = 13;
+            x[i] = ((float)Math.random() * 26) - 12;
+	        if (x[i] > 13) {
+		        x[i] = 13;
 	        }
-	    x[i] = temp;
         }
 
         //Task 3
