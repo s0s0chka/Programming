@@ -14,11 +14,9 @@ public class Lab1 {
 
         if (condition == 6){
             result = Math.cbrt(Math.tan(Math.cos(x)));
-        } 
-        else if(condition == 8 || condition == 12 || condition == 14 || condition == 20){
+        } else if(condition == 8 || condition == 12 || condition == 14 || condition == 20){
             result = Math.log(Math.pow(Math.tan(Math.cos(Math.asin((x + 0.5) / 25))), 2));
-        } 
-        else {
+        } else {
             result = Math.pow(Math.E, Math.pow((2/3) / (Math.pow(Math.pow(Math.E, x), Math.pow(2 - x, 3) / 2 - 1)), 3));
         }
         return result;
