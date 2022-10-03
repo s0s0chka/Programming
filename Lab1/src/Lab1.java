@@ -24,10 +24,10 @@ public class Lab1 {
     public static void main(String[] args){
         //Task 1
         short[] f = new short[9];
+        short tmp = 4;
         for(int i = 0; i < f.length; i++){
-            if (i % 2 == 0) {
-                f[i] = (short)(i + 4);
-            }
+            f[i] = tmp;
+            tmp += 2;
         }
 
         //Task 2
