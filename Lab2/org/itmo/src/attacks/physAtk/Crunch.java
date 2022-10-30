@@ -1,4 +1,4 @@
-package src.attacks.physAtk;
+package org.itmo.src.attacks.physAtk;
 
 import ru.ifmo.se.pokemon.*;
 
@@ -12,7 +12,6 @@ public class Crunch extends PhysicalMove{
     protected void applyOppEffects(Pokemon pokemon){
         pokemon.addEffect(new Effect().chance(0.2).stat(Stat.DEFENSE, -1));
     }
-    //Has to only lower defense up to a maximum of -6, how tf would you do that
 
     @Override
     protected String describe() {

@@ -1,4 +1,4 @@
-package src.attacks.specAtk;
+package org.itmo.src.attacks.specAtk;
 
 import ru.ifmo.se.pokemon.*;
 

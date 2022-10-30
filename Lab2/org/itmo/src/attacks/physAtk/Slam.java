@@ -1,4 +1,4 @@
-package src.attacks.physAtk;
+package org.itmo.src.attacks.physAtk;
 
 import ru.ifmo.se.pokemon.*;
 
