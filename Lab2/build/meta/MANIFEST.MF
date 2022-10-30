@@ -1,0 +1,2 @@
+Main-Class: org.itmo.Program
+Class-Path: libs/Pokemon.jar
