@@ -15,6 +15,6 @@ public class Cosmog extends Pokemon {
         this.setStats(43, 29, 31, 29, 31, 37);
         this.setType(Type.PSYCHIC);
         
-        this.setMove(new Swagger(), new Scald(), new Blizzard(), new Haze());
+        this.setMove(new Blizzard(), new Scald(), new Haze(), new Swagger());
     }
 }
