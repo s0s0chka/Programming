@@ -10,10 +10,8 @@ public class Haze extends StatusMove{
     @Override
     protected void applySelfEffects(Pokemon pokemon){
         for(Stat stat : Stat.values()){
-            Effect effect = new Effect().stat(stat, +12);
-            pokemon.addEffect(effect);
-            effect = new Effect().stat(stat, -6);
-            pokemon.addEffect(effect);
+            pokemon.setMod(stat, 12);
+            pokemon.setMod(stat, -6);
         }
     }
 
