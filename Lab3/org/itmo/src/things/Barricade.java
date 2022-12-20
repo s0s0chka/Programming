@@ -11,13 +11,13 @@ public class Barricade extends Thing{
         consistsOf = new ArrayList<>();
     }
 
-    public Barricade(String name) {
+    public Barricade(String name, String location) {
         super(name);
+        this.setLocation(location);
     }
 
     public void addToBarricade(Thing thing) {
         consistsOf.add(thing);
-        System.out.println("К " + this.getName() + " добавили " + thing.getName());
         if (consistsOf.size() > 3) { 
             System.out.println("Перед " + this.getLocation() + " сформировалась " + this.getName()); 
         }

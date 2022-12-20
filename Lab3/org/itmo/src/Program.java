@@ -18,7 +18,7 @@ public class Program {
         Table table = new Table("стол");
         Chair chair = new Chair("стул");
         Bookcase bookcase = new Bookcase("этажерка");
-        Barricade barricade = new Barricade("баррикада");
+        Barricade barricade = new Barricade("баррикада", "дверь");
 
         dresser.moveTo("дверь", frekenBock.getName());
         barricade.addToBarricade(dresser);
