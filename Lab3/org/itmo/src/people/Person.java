@@ -46,10 +46,8 @@ public abstract class Person {
     @Override
     public boolean equals(Object otherObject) {
         if (this == otherObject) return true;
-        if (otherObject == null) return false;
-        if (!this.getClass().equals(otherObject.getClass())) return false;
+        if (otherObject == null || getClass() != otherObject.getClass()) return false;
         Person other = (Person) otherObject;
-
         return this.name.equals(other.name) && this.condition.equals(other.condition);
     }
 

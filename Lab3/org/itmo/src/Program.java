@@ -40,6 +40,9 @@ public class Program {
         barricade.addToBarricade(bookcase);
 
         System.out.println();
+        System.out.println();
         System.out.println(baby);
+        System.out.println(door);
+        System.out.println(dresser);
     }
 }

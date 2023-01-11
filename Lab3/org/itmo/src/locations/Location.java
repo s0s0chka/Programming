@@ -20,10 +20,8 @@ public class Location {
     @Override
     public boolean equals(Object otherObject) {
         if (this == otherObject) return true;
-        if (otherObject == null) return false;
-        if (!this.getClass().equals(otherObject.getClass())) return false;
+        if (otherObject == null || getClass() != otherObject.getClass()) return false;
         Location other = (Location) otherObject;
-
         return this.name.equals(other.name);
     }
 

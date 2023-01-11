@@ -42,10 +42,8 @@ public abstract class Thing{
     @Override
     public boolean equals(Object otherObject) {
         if (this == otherObject) return true;
-        if (otherObject == null) return false;
-        if (!this.getClass().equals(otherObject.getClass())) return false;
+        if (otherObject == null || getClass() != otherObject.getClass()) return false;
         Thing other = (Thing) otherObject;
-
         return this.name.equals(other.name);
     }
 

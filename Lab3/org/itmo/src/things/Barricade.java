@@ -26,9 +26,8 @@ public class Barricade extends Thing{
 
     @Override
     public boolean equals(Object otherObject){
-        if (!super.equals(otherObject)) return false;
         Barricade other = (Barricade) otherObject;
-        return this.consistsOf.equals(other.consistsOf);
+        return super.equals(otherObject) && this.consistsOf.equals(other.consistsOf);
     }
 
     @Override
