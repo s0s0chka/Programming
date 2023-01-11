@@ -50,7 +50,7 @@ public abstract class Person {
         if (!this.getClass().equals(otherObject.getClass())) return false;
         Person other = (Person) otherObject;
 
-        return this.name.equals(other.name);
+        return this.name.equals(other.name) && this.condition.equals(other.condition);
     }
 
     @Override
@@ -60,7 +60,7 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "[" + "name=" + name + "]" + 
-                "[" + "condition=" + condition + "]";
+        return this.getClass().getName() + "[name=" + name + "]" + 
+                "[condition=" + condition + "]";
     }
 }

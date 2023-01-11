@@ -56,6 +56,6 @@ public abstract class Thing{
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "[" + "name=" + name + "]";
+        return this.getClass().getName() + "[name=" + name + "]" + "[location=" + location + "]";
     }
 }

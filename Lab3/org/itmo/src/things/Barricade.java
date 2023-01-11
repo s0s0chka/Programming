@@ -38,6 +38,6 @@ public class Barricade extends Thing{
 
     @Override
     public String toString() {
-        return super.toString() + "[" + "consitsOf=" + consistsOf.toString() + "]";
+        return super.toString() + "[consitsOf=" + consistsOf.toString() + "]";
     }
 }

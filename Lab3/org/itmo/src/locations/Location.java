@@ -34,6 +34,6 @@ public class Location {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "[" + "name=" + name + "]";
+        return this.getClass().getName() + "[name=" + name + "]";
     }
 }
