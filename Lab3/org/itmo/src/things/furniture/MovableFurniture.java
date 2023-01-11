@@ -14,6 +14,7 @@ public class MovableFurniture extends Thing implements IMovable {
         super(name, location);
     }
 
+    @Override
     public void moveTo(Location location, Person person) {
         setLocation(location);
         System.out.print(person.getName() + " пододвинул " + getName() +  " к " + location.getName() + ". ");

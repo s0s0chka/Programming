@@ -17,11 +17,13 @@ public class SittableFurniture extends Thing implements ISittable {
         super(name, location);
     }
 
+    @Override
     public void setSittingPerson(String personName){
         this.whosSitting = personName;
         System.out.print(personName + " сел на " + getName() + ". ");
     }
 
+    @Override
     public String getSittingPerson() {
         return whosSitting;
     }
