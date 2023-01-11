@@ -1,32 +1,44 @@
 import things.furniture.*;
 import things.*;
+import locations.Location;
 import people.*;
 
 public class Program {
     public static void main(String[] args){
+
         Baby baby = new Baby("Малыш");
-        FrekenBock frekenBock = new FrekenBock("Фрекен Бок");
-        Bed bed = new Bed("папина кровать");
+        FrekenBock frekenBock = new FrekenBock("Фрекен Бок", Condition.FEAR);
+        Frid frid = new Frid("Фрид");
+        
+        SittableFurniture bed = new SittableFurniture("папина кровать");
+
         baby.understand("это", false);
         baby.sitOn(bed);
         baby.lookAt(frekenBock);
         baby.shakeHead();
-        Frid frid = new Frid("Фрид");
         frekenBock.wantToHearAbout(frid, false);
         
-        Dresser dresser = new Dresser("комод");
-        Table table = new Table("стол");
-        Chair chair = new Chair("стул");
-        Bookcase bookcase = new Bookcase("этажерка");
-        Barricade barricade = new Barricade("баррикада", "дверь");
+        Location door = new Location("дверь");
 
-        dresser.moveTo("дверь", frekenBock.getName());
+        MovableFurniture dresser = new MovableFurniture("комод");
+        MovableFurniture table = new MovableFurniture("стол");
+        MovableFurniture chair = new MovableFurniture("стул");
+        MovableFurniture bookcase = new MovableFurniture("этажерка");
+
+        Barricade barricade = new Barricade("баррикада", door);
+
+        dresser.moveTo(door, frekenBock);
         barricade.addToBarricade(dresser);
-        table.moveTo("дверь", frekenBock.getName());
+
+        table.moveTo(door, frekenBock);
         barricade.addToBarricade(table);
-        chair.moveTo("дверь", frekenBock.getName());
+
+        chair.moveTo(door, frekenBock);
         barricade.addToBarricade(chair);
-        bookcase.moveTo("дверь", frekenBock.getName());
+        
+        bookcase.moveTo(door, frekenBock);
         barricade.addToBarricade(bookcase);
+
+        System.out.println();
     }
 }

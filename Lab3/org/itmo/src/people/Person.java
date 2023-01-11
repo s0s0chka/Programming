@@ -1,6 +1,5 @@
 package people;
 
-import things.ISittable;
 import java.util.Objects;
 
 public abstract class Person {
@@ -9,52 +8,40 @@ public abstract class Person {
 
     {
         name = "безымянный";
+        condition = Condition.NORMAL;
     }
 
     public Person(String name) {
         this.name = name;
     }
 
+    public Person(String name, Condition condition){
+        this.name = name;
+        this.condition = condition;
+    }
+
     public String getName(){
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Condition getConditon() {
+        return condition;
     }
 
     public void setCondition(Condition condition) {
-        this.condition = condition;   
-    }
+        this.condition = condition;
+    } 
 
-    public void understand(String something, boolean canUnderstand) {
-        if (canUnderstand) {
-            System.out.println(this.name + " мог понять " + something);
-        } else {
-            System.out.println(this.name + " не мог понять " + something);
+    public String getReadableCodition() {
+        if (condition == Condition.FEAR) {
+            return "напуганный";
         }
+        return "";
     }
 
-    public void sitOn(ISittable thing) {
-        thing.setSittingPerson(name);
+    public String getNameWithCondition() {
+        return getReadableCodition() + " " + getName();
     }
-
-    public void shakeHead() {
-        System.out.println(this.name + " покачал головой");
-    }
-
-    public void lookAt(Person person){
-        System.out.println(this.name + " посмотрел на " + person.getName());
-    }
-
-    public void wantToHearAbout(Person person, boolean wantsToHear) {
-        if (wantsToHear) {
-            System.out.println(this.name + "хочет слышать о " + person.getName());
-        } else {
-            System.out.println(this.name + " не хочет слышать о " + person.getName() + "е");
-        }
-    }
-
 
     @Override
     public boolean equals(Object otherObject) {
@@ -68,11 +55,12 @@ public abstract class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.name);
+        return Objects.hash(this.name, this.condition);
     }
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "[" + "name=" + name + "]";
+        return this.getClass().getName() + "[" + "name=" + name + "]" + 
+                "[" + "condition=" + condition + "]";
     }
 }

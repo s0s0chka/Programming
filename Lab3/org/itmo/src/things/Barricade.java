@@ -3,6 +3,8 @@ package things;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import locations.Location;
+
 public class Barricade extends Thing{
     
     private ArrayList<Thing> consistsOf;
@@ -11,15 +13,14 @@ public class Barricade extends Thing{
         consistsOf = new ArrayList<>();
     }
 
-    public Barricade(String name, String location) {
-        super(name);
-        this.setLocation(location);
+    public Barricade(String name, Location location) {
+        super(name, location);
     }
 
     public void addToBarricade(Thing thing) {
         consistsOf.add(thing);
         if (consistsOf.size() > 3) { 
-            System.out.println("Перед " + this.getLocation() + " сформировалась " + this.getName()); 
+            System.out.print("Перед " + getLocationName() + " сформировалась " + getName() + ". "); 
         }
     }
 
@@ -29,7 +30,6 @@ public class Barricade extends Thing{
         Barricade other = (Barricade) otherObject;
         return this.consistsOf.equals(other.consistsOf);
     }
-
 
     @Override
     public int hashCode() {

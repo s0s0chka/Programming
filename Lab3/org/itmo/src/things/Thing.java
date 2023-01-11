@@ -1,22 +1,22 @@
 package things;
 
 import java.util.Objects;
+import locations.Location;
 
 public abstract class Thing{
     private String name;
-    private String location;
-
+    private Location location;
     {
         name = "вещь без имени";
-        location = "неизвестное положение";
     }
 
-    protected Thing() {
-
-    }
-
-    protected Thing(String name) {
+    public Thing(String name) {
         this.setName(name);
+    }
+
+    public Thing(String name, Location location) {
+        this.setName(name);
+        this.location = location;
     }
 
     public String getName(){
@@ -27,12 +27,16 @@ public abstract class Thing{
         this.name = name;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    protected void setLocation(String location) {
+    protected void setLocation(Location location) {
         this.location = location;
+    }
+
+    public String getLocationName() {
+        return location.getName();
     }
 
     @Override
