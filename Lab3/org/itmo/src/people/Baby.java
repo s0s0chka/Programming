@@ -17,9 +17,9 @@ public class Baby extends Person {
 
     public void understand(String something, boolean canUnderstand) {
         if (canUnderstand) {
-            System.out.print(this.getName() + " мог понять " + something + ". ");
+            System.out.println(this.getName() + " мог понять " + something + ". ");
         } else {
-            System.out.print(this.getName() + " не мог понять " + something + ". ");
+            System.out.println(this.getName() + " не мог понять " + something + ". ");
         }
     }
 
@@ -29,11 +29,11 @@ public class Baby extends Person {
     }
 
     public void shakeHead() {
-        System.out.print(this.getName() + " покачал головой" + ". ");
+        System.out.println(this.getName() + " покачал головой" + ". ");
     }
 
     public void lookAt(Person person){
-        System.out.print(this.getName() + " посмотрел на " + person.getNameWithCondition() + ". ");
+        System.out.println(this.getName() + " посмотрел на " + person.getNameWithCondition() + ". ");
     }
 
     @Override

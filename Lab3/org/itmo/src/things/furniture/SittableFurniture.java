@@ -20,7 +20,7 @@ public class SittableFurniture extends Thing implements ISittable {
     @Override
     public void setSittingPerson(String personName){
         this.whosSitting = personName;
-        System.out.print(personName + " сел на " + getName() + ". ");
+        System.out.println(personName + " сел на " + getName() + ". ");
     }
 
     @Override

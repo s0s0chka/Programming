@@ -10,9 +10,9 @@ public class FrekenBock extends Person {
 
     public void wantToHearAbout(Person person, boolean wantsToHear) {
         if (wantsToHear) {
-            System.out.print(this.getName() + "хочет слышать о " + person.getName() + ". ");
+            System.out.println(this.getName() + "хочет слышать о " + person.getName() + ". ");
         } else {
-            System.out.print(this.getName() + " не хочет слышать о " + person.getName() + ". ");
+            System.out.println(this.getName() + " не хочет слышать о " + person.getName() + ". ");
         }
     }
 }

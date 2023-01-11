@@ -33,10 +33,7 @@ public abstract class Person {
     } 
 
     public String getReadableCodition() {
-        if (condition == Condition.FEAR) {
-            return "напуганный";
-        }
-        return "";
+        return condition.getName();
     }
 
     public String getNameWithCondition() {
